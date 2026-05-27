@@ -1,3 +1,4 @@
+AUTODOCK
 # Ubuntu/Debian
 conda install -c conda-forge autodock-vina
 
@@ -5,3 +6,14 @@ conda install -c conda-forge autodock-vina
 wget https://github.com/ccsb-scripps/AutoDock-Vina/releases/download/v1.2.5/vina_1.2.5_linux_x86_64
 chmod +x vina_1.2.5_linux_x86_64
 mv vina_1.2.5_linux_x86_64 /usr/local/bin/vina
+
+FPOCKET
+# Ubuntu/Debian
+sudo apt-get install fpocket
+
+# Or build from source
+wget https://github.com/Discngine/fpocket/archive/refs/tags/4.0.tar.gz
+tar -xzf 4.0.tar.gz
+cd fpocket-4.0
+make
+sudo make install
