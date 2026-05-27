@@ -1,0 +1,7 @@
+# Ubuntu/Debian
+conda install -c conda-forge autodock-vina
+
+# Or download binary directly
+wget https://github.com/ccsb-scripps/AutoDock-Vina/releases/download/v1.2.5/vina_1.2.5_linux_x86_64
+chmod +x vina_1.2.5_linux_x86_64
+mv vina_1.2.5_linux_x86_64 /usr/local/bin/vina
