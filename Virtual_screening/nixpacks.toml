@@ -1,0 +1,19 @@
+[phases.setup]
+nixPkgs = [
+    "python311",
+    "openbabel",
+    "fpocket",
+    "wget",
+    "gcc",
+    "make",
+]
+
+[phases.build]
+cmds = [
+    "pip install -r requirements.txt",
+    "wget https://github.com/ccsb-scripps/AutoDock-Vina/releases/download/v1.2.5/vina_1.2.5_linux_x86_64 -O /usr/local/bin/vina",
+    "chmod +x /usr/local/bin/vina",
+]
+
+[start]
+cmd = "uvicorn main:app --host 0.0.0.0 --port $PORT"
